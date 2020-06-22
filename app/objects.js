@@ -41,7 +41,7 @@ function colorTheCat() {
 }
 
 // Delete the whiskers property off of the cat object. You may use either dot or bracket notation.
-
+delete cat.whiskers
 
 // Write a function that uses dot AND bracket notation to access and return the 
 // value of the fourth item in the likes array("pets"). 
