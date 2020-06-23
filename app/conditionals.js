@@ -2,7 +2,12 @@
 
 function largerNum(num1, num2) {
     // you code here
-
+    if (num1 > num2) {
+        return num1
+    }
+    else {
+        return num2
+    }
 }
 
 // 2. Given two numbers, amount correct and amount possible of a test, return the corresponding letter grade.
@@ -14,7 +19,21 @@ function largerNum(num1, num2) {
 // output: "F"
 
 function testGrader(score, possible) {
-
+    if (score <= 10) {
+        return "F"
+    }
+    if (score <= 14) {
+        return "D"
+    }
+    if (score <= 19) {
+        return "C"
+    }
+    if (score <= 22) {
+        return "B"
+    }
+    if (score <= 25) {
+        return "A"
+    }
 }
 
 
@@ -30,12 +49,34 @@ function testGrader(score, possible) {
 
 function timeOfDayGreeting(hour) {
     // you code below
-
+    if (hour < 5) {
+        return "Good Night"
+    }
+    if (hour >= 5 && hour <= 11) {
+        return "Good Morning"
+    }
+    if (hour >= 12 && hour <= 17) {
+        return "Good Afternoon"
+    }
+    if (hour >= 18 && hour <= 21) {
+        return "Good Evening"
+    }
+    if (hour >= 22 && hour <= 24) {
+        return "Good Night"
+    }
 }
 
 //4. Write a function that will take in a number and return 'fever' if it indicates a fever (over 98.6) and additionally if the person should go to the hospital (at or above 103) 'fever go to hospital' (hint: try this with string concatenation), if it is under return 'no fever'
 function isFever(temp) {
-
+    if (temp <= 98.6) {
+        return "no fever"
+    }
+    if (temp >= 98.7 && temp < 103) {
+        return "fever"
+    }
+    else {
+        return "fever go to hospital"
+    }
 }
 
 //5. Write a function that takes in a car object, if it is not moving then return true
@@ -47,8 +88,14 @@ let myCar = {
 }
 
 function isStopped(car) {
+    if (car.moving == false) {
+        return true
+    } else if (car.moving) {
+        return false
+    }
 
 }
+
 
 //6. Write a function that returns true if a dish is yours and is dirty, or false if one of the statements is false
 
@@ -58,5 +105,10 @@ let dish = {
 }
 
 function washDish(dish) {
-
+    if (dish.yourDish == true && dish.isDirty == true) {
+        return true
+    } else {
+        return false
+    }
 }
+
